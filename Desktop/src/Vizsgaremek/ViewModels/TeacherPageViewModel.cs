@@ -30,5 +30,11 @@ namespace Vizsgaremek.ViewModels
             }
         }
 
+        public void Update()
+        {
+            displayedTeachers.Clear();
+            displayedTeachers = new ObservableCollection<Teacher>(teachersRepo.AllTeachers);
+        }
+
     }
 }

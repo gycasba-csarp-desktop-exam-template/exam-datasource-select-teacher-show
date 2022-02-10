@@ -8,7 +8,7 @@ using Vizsgaremek.Models;
 
 namespace Vizsgaremek.Repositories
 {
-    class Teachers
+    public partial class Teachers 
     {
         private List<Teacher> teachers;
 
@@ -34,6 +34,13 @@ namespace Vizsgaremek.Repositories
             teachers.Add(new Teacher("10101111114", "Arany", "András", "123456", false, EmploymentValue.DONEONCOMMISSION));
             teachers.Add(new Teacher("10101111115", "Sportoló", "Jenő", "123456", false, EmploymentValue.DONEONCOMMISSION));
             teachers.Add(new Teacher("10101111116", "Visszanéző", "Viola", "123456", false, EmploymentValue.DONEONCOMMISSION));
+        }
+
+        public void Update()
+        {
+            teachers.Clear();
+            teachers = new List<Teacher>();
+            MakeTestData();
         }
 
     }
